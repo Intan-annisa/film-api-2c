@@ -1,0 +1,612 @@
+{
+	"info": {
+		"_postman_id": "9fef9917-ba88-4813-a5cf-c467891790ab",
+		"name": "api manajemen film dan directors RBAC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48016180"
+	},
+	"item": [
+		{
+			"name": "regis user biasa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"intanannisa\",\r\n  \"password\": \"221005\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "regis admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"intanadminnn\",\r\n  \"password\": \"admin2812\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/auth/register-admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"auth",
+						"register-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"intanannisa\",\r\n  \"password\": \"221005\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"intanadminnn\",\r\n  \"password\": \"admin2812\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lihat semua film",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3300/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah film (login user)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImludGFuYW5uaXNhIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzYyNDk5NjQxLCJleHAiOjE3NjI1MDMyNDF9.-IS-h500YZV_bmcblVCOpyvUQQNgcvm-smtqo6vPGsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Siksa Kubur\",\r\n  \"director\": \"Joko Anwar\",\r\n  \"year\": 2024\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah film 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImludGFuYW5uaXNhIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzYyNDk5NjQxLCJleHAiOjE3NjI1MDMyNDF9.-IS-h500YZV_bmcblVCOpyvUQQNgcvm-smtqo6vPGsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Sang Penari\",\r\n  \"director\": \"Ifa Isfansyah\",\r\n  \"year\": 2011\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah film token kosong",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Sang Penari\",\r\n  \"director\": \"Ifa Isfansyah\",\r\n  \"year\": 2011\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah film token salah",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer tokenSalah",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Sayu Angel Lailiya\",\r\n  \"birthYear\": 2002\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3300/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update film (hanya admin)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImludGFuYWRtaW5ubiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3NjI0OTk3MDEsImV4cCI6MTc2MjUwMzMwMX0.gt_nIVHDho9ArGrVftEB57hosuv_Ua9ov7ZSBlLFPLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Yuni\",\r\n  \"director\": \"Kamila Andini\",\r\n  \"year\": 2021\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/movies/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"movies",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hapus film (hanya admin)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImludGFuYWRtaW5ubiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3NjI0OTk3MDEsImV4cCI6MTc2MjUwMzMwMX0.gt_nIVHDho9ArGrVftEB57hosuv_Ua9ov7ZSBlLFPLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Sang Penari\",\r\n  \"director\": \"Ifa Isfansyah\",\r\n  \"year\": 2011\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3300/movies/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"movies",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hapus film sebagai user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImludGFuYW5uaXNhIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzYyNDk5NjQxLCJleHAiOjE3NjI1MDMyNDF9.-IS-h500YZV_bmcblVCOpyvUQQNgcvm-smtqo6vPGsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Sang Penari\",\r\n  \"director\": \"Ifa Isfansyah\",\r\n  \"year\": 2011\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3300/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lihat semua directors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImludGFuYW5uaXNhIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzYyNDk5NjQxLCJleHAiOjE3NjI1MDMyNDF9.-IS-h500YZV_bmcblVCOpyvUQQNgcvm-smtqo6vPGsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Sang Penari\",\r\n  \"director\": \"Ifa Isfansyah\",\r\n  \"year\": 2011\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3300/directors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"directors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah directors (user)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImludGFuYW5uaXNhIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzYyNDk5NjQxLCJleHAiOjE3NjI1MDMyNDF9.-IS-h500YZV_bmcblVCOpyvUQQNgcvm-smtqo6vPGsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Intan Nur Annisa\",\r\n  \"birthYear\": 2005\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/directors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"directors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah directors 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImludGFuYW5uaXNhIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzYyNDk5NjQxLCJleHAiOjE3NjI1MDMyNDF9.-IS-h500YZV_bmcblVCOpyvUQQNgcvm-smtqo6vPGsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Sayu Angel Lailiya\",\r\n  \"birthYear\": 2002\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/directors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"directors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah directors token kosong",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Faradilla Farlinda\",\r\n  \"birthYear\": 2000\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3300/directors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"directors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tambah directors token salah",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "IniTokenSalah",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Faradilla Farlinda\",\r\n  \"birthYear\": 2000\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3300/directors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"directors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update directors (admin)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImludGFuYWRtaW5ubiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3NjI0OTk3MDEsImV4cCI6MTc2MjUwMzMwMX0.gt_nIVHDho9ArGrVftEB57hosuv_Ua9ov7ZSBlLFPLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Rafanza Zaidan\",\r\n  \"birthYear\": 2000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3300/directors/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"directors",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hapus directors (admin)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImludGFuYWRtaW5ubiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3NjI0OTk3MDEsImV4cCI6MTc2MjUwMzMwMX0.gt_nIVHDho9ArGrVftEB57hosuv_Ua9ov7ZSBlLFPLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Sang Penari\",\r\n  \"director\": \"Ifa Isfansyah\",\r\n  \"year\": 2011\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3300/directors/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"directors",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hapus directors sebagai user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImludGFuYW5uaXNhIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzYyNDk5NjQxLCJleHAiOjE3NjI1MDMyNDF9.-IS-h500YZV_bmcblVCOpyvUQQNgcvm-smtqo6vPGsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Sayu Angel Lailiya\",\r\n  \"birthYear\": 2002\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3300/directors/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"directors",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
